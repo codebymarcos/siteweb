@@ -1,0 +1,10 @@
+<button onclick="load()">Ver Logs</button>
+<pre id="out"></pre>
+
+<script>
+function load() {
+  fetch("/api/logs")
+    .then(r => r.json())
+    .then(d => document.getElementById("out").innerText = JSON.stringify(d));
+}
+</script>
