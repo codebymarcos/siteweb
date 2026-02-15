@@ -104,6 +104,7 @@ def main():
             
             print_metric("IPs Únicos", ddos_info.get('total_unique_ips', 0), icon="🧑‍💻")
             print_metric("IPs Suspeitos", len(ddos_info.get('suspicious_ips', {})), icon="🚫")
+            print_metric("Req. Locais (ignoradas)", ddos_info.get('local_filtered', 0), icon="🏠")
             
             if ddos_info.get('suspicious_ips'):
                 print("\n  \033[1;31m⛔ IPs SUSPEITOS:\033[0m")
